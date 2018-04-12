@@ -16,7 +16,6 @@ public class Container {
 			oct[i] = input.nextInt();
 		}
       
-      input.close();
       
       Scanner second = new Scanner(System.in);
       System.out.println("Enter Hosts Needed: ");
@@ -25,8 +24,6 @@ public class Container {
       System.out.println("Enter Subnets Needed: ");
       nSubnets = second.nextInt();
       
-      second.close();
-		
       
 		//Printing IP
 		System.out.println("Network Address:");
@@ -57,18 +54,22 @@ public class Container {
       NandG gan = new NandG(nHosts, nSubnets);
       System.out.println("Needed Hosts:");
       System.out.println(nHosts);
-      System.out.println("Usable Hosts:");
-      System.out.println((gan.getGHosts() -2));
-      
       System.out.println("Needed Subnets:");
       System.out.println(nSubnets);
+      
+      System.out.println("");
+      
+      System.out.println("Usable Hosts:");
+      System.out.println((gan.getGHosts() -2));
       System.out.println("Usable Subnets:");
+      System.out.println(gan.getGHosts());
 		
 		//Exporting data	
 		FileWriter writing = new FileWriter("test.csv");
 		writing.append("testing");
 		writing.close();
 
-		
+		input.close();
+		second.close();
 	}	
 }
