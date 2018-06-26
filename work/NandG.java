@@ -10,17 +10,17 @@ public class NandG {
    
    
    //Constructor
-   public NandG(int x, int y) {
-      hostsNeeded(x);
-      subnetsNeeded(y);
+   public NandG(int h, int s) {
+      hostsNeeded(h);
+      subnetsNeeded(s);
    }
    
    //Methods
-   public int hostsNeeded(int xx) {
+   public int hostsNeeded(int hh) {
       base = 2;
       exponent = 2;
       while(gHosts < 0) {
-         if(xx <= (Math.pow(base, exponent) -2)) {
+         if(hh <= (Math.pow(base, exponent) -2)) {
             gHosts = (int)Math.pow(base, exponent);
          }
          exponent++;
@@ -28,11 +28,11 @@ public class NandG {
       return gHosts;
    }
    
-   public int subnetsNeeded(int yy) {
+   public int subnetsNeeded(int ss) {
       base = 2;
       exponent = 2;
       while(gSubnets < 0) {
-         if(yy <= (Math.pow(base, exponent))) {
+         if(ss <= (Math.pow(base, exponent))) {
             gSubnets = (int)Math.pow(base, exponent);
          }
          exponent++;
@@ -55,6 +55,10 @@ public class NandG {
    }
    public int getGSubnets() {
       return gSubnets;
+   }
+   
+   public int getBB() {
+	   return exponent-1;
    }
    
 }
