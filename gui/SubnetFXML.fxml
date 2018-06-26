@@ -81,18 +81,18 @@
                </font>
             </Label>
             <TextField fx:id="addClass" alignment="CENTER" editable="false" layoutX="271.0" layoutY="237.0" prefHeight="25.0" prefWidth="87.0" style="-fx-background-color: #282e36; -fx-text-fill: #e3e3e3;" />
-            <Label layoutX="114.0" layoutY="299.0" text="Usable Hosts:" textFill="#e3e3e3">
+            <Label layoutX="114.0" layoutY="360.0" text="Usable Hosts:" textFill="#e3e3e3">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <TextField fx:id="uHosts" alignment="CENTER" editable="false" layoutX="113.0" layoutY="326.0" prefHeight="25.0" prefWidth="87.0" style="-fx-background-color: #282e36; -fx-text-fill: #e3e3e3;" />
-            <Label layoutX="444.0" layoutY="298.0" text="Usable Subnets:" textFill="#e3e3e3">
+            <TextField fx:id="uHosts" alignment="CENTER" editable="false" layoutX="113.0" layoutY="387.0" prefHeight="25.0" prefWidth="87.0" style="-fx-background-color: #282e36; -fx-text-fill: #e3e3e3;" />
+            <Label layoutX="444.0" layoutY="284.0" text="Usable Subnets:" textFill="#e3e3e3">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <TextField fx:id="uSubnets" alignment="CENTER" editable="false" layoutX="450.0" layoutY="325.0" prefHeight="25.0" prefWidth="87.0" style="-fx-background-color: #282e36; -fx-text-fill: #e3e3e3;" />
+            <TextField fx:id="uSubnets" alignment="CENTER" editable="false" layoutX="450.0" layoutY="311.0" prefHeight="25.0" prefWidth="87.0" style="-fx-background-color: #282e36; -fx-text-fill: #e3e3e3;" />
             <Label layoutX="91.0" layoutY="209.0" text="Default Subnet Mask:" textFill="#e3e3e3">
                <font>
                   <Font size="14.0" />
@@ -105,7 +105,7 @@
                </font>
             </Label>
             <TextField fx:id="customMask" alignment="CENTER" editable="false" layoutX="434.0" layoutY="236.0" prefHeight="25.0" prefWidth="116.0" style="-fx-background-color: #282e36; -fx-text-fill: #e3e3e3;" />
-            <Button layoutX="276.0" layoutY="318.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="78.0" style="-fx-text-fill: #e3e3e3;" stylesheets="@css/subnetterStyle.css" text="Export">
+            <Button layoutX="453.0" layoutY="374.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="78.0" style="-fx-text-fill: #e3e3e3;" stylesheets="@css/subnetterStyle.css" text="Export">
                <font>
                   <Font size="18.0" />
                </font>
@@ -116,7 +116,25 @@
                </font>
             </Button>
             <Label fx:id="status" layoutX="7.0" layoutY="428.0" text="Status :" textFill="#8d8d8d" />
-            <Label layoutX="51.0" layoutY="428.0" text="waiting..." textFill="#5e5e5e" />
+            <Label fx:id="currentStatus" layoutX="51.0" layoutY="428.0" text="waiting..." textFill="#5e5e5e" />
+            <Label layoutX="120.0" layoutY="284.0" text="Total Hosts:" textFill="#e3e3e3">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tHosts" alignment="CENTER" editable="false" layoutX="114.0" layoutY="311.0" prefHeight="25.0" prefWidth="87.0" style="-fx-background-color: #282e36; -fx-text-fill: #e3e3e3;" />
+            <Label layoutX="269.0" layoutY="283.0" text="Total Subnets:" textFill="#e3e3e3">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tSubnets" alignment="CENTER" editable="false" layoutX="270.0" layoutY="310.0" prefHeight="25.0" prefWidth="87.0" style="-fx-background-color: #282e36; -fx-text-fill: #e3e3e3;" />
+            <Label layoutX="274.0" layoutY="361.0" text="Bits Borrowed:" textFill="#e3e3e3">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="bitsBorrowed" alignment="CENTER" editable="false" layoutX="273.0" layoutY="388.0" prefHeight="25.0" prefWidth="87.0" style="-fx-background-color: #282e36; -fx-text-fill: #e3e3e3;" />
          </children>
       </Pane>
    </children>
