@@ -8,18 +8,18 @@ public class Defaults {
 	
 	//Contructor
 	//Sending info to methods
-	public Defaults(char x) {
-		if(x == 'A') {
-			bitsborrowed('A');
-			zeros('A');
+	public Defaults(String x) {
+		if(x == "A") {
+			bitsborrowed("A");
+			zeros("A");
 		}
-		else if(x == 'B') {
-			bitsborrowed('B');
-			zeros('B');
+		else if(x == "B") {
+			bitsborrowed("B");
+			zeros("B");
 		}
-		else if(x == 'C') {
-			bitsborrowed('C');
-			zeros('C');
+		else if(x == "C") {
+			bitsborrowed("C");
+			zeros("C");
 		}
 		
 		subnetMask(x);
@@ -27,16 +27,16 @@ public class Defaults {
 	}
 	
 	//Solving for default bitsborrowed
-	public int bitsborrowed(char x) {
-		if(x == 'A') {
+	public int bitsborrowed(String x) {
+		if(x == "A") {
 			bb = 8;
 		}
 		
-		if(x == 'B') {
+		if(x == "B") {
 			bb = 16;
 		}
 		
-		if(x == 'C') {
+		if(x == "C") {
 			bb = 24;
 		}
 		
@@ -44,16 +44,16 @@ public class Defaults {
 	}
 	
 	//Solving for default zeros
-	public int zeros(char x) {
-		if(x == 'A') {
+	public int zeros(String x) {
+		if(x == "A") {
 			z = 24;
 		}
 		
-		if(x == 'B') {
+		if(x == "B") {
 			z = 16;
 		}
 		
-		if(x == 'C') {
+		if(x == "C") {
 			z = 8;
 		}
 		
@@ -64,22 +64,22 @@ public class Defaults {
 	//===============================================================
 	//NEED TO BEABLE TO PRINT OUT DEFAULT SUBNET MASK FOR EACH CLASS
 	//===============================================================
-	public int[] subnetMask(char x) {	
-		if(x == 'A') {
+	public int[] subnetMask(String x) {	
+		if(x == "A") {
 			defaultSubnetMask[0] = 255;
 			defaultSubnetMask[1] = 0;
 			defaultSubnetMask[2] = 0;
 			defaultSubnetMask[3] = 0;
 		}
 		
-		else if(x == 'B') {
+		else if(x == "B") {
 			defaultSubnetMask[0] = 255;
 			defaultSubnetMask[1] = 255;
 			defaultSubnetMask[2] = 0;
 			defaultSubnetMask[3] = 0;
 		}
 		
-		else if(x == 'C') {
+		else if(x == "C") {
 			defaultSubnetMask[0] = 255;
 			defaultSubnetMask[1] = 255;
 			defaultSubnetMask[2] = 255;
