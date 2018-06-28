@@ -108,9 +108,9 @@ public class SubnetController {
 		}
 		
 		//Case of S only.
-		else if(nSubnets.getText().equals("")) {
-			int savedNSubnets = 0;
-			int savedNHosts = Integer.parseInt(nHosts.getText());
+		else if(nHosts.getText().equals("")) {
+			int savedNSubnets = Integer.parseInt(nSubnets.getText());
+			int savedNHosts = 0;
 			ipConversion(ipAddress.getText());
 			calculator(oct, savedNSubnets, savedNHosts);
 			currentStatus.setText("calculating...");
@@ -118,9 +118,9 @@ public class SubnetController {
 		}
 		
 		//Case of H only.
-		else if(nHosts.getText().equals("")) {
-			int savedNHosts = 0;
-			int savedNSubnets = Integer.parseInt(nSubnets.getText());
+		else if(nSubnets.getText().equals("")) {
+			int savedNHosts = Integer.parseInt(nHosts.getText());
+			int savedNSubnets = 0;
 			ipConversion(ipAddress.getText());
 			calculator(oct, savedNSubnets, savedNHosts);
 			currentStatus.setText("calculating...");
@@ -155,12 +155,14 @@ public class SubnetController {
 		
 		
 		//Needed and Given Subnets and Hosts and Bits Borrowed.
-		NandG getNG = new NandG(h, s);
+		
+		NandG getNG = new NandG(h, s, getDefs.getDefaultZ(), getDefs.getDefaultBB());
 		tHosts.setText(Integer.toString(getNG.getGHosts()));
 		tSubnets.setText(Integer.toString(getNG.getGSubnets()));
 		uHosts.setText(Integer.toString(getNG.getGHosts()-2));
 		uSubnets.setText(Integer.toString(getNG.getGSubnets()));
 		bitsBorrowed.setText(Integer.toString(getNG.getBB()));
+		
 		
 		//Custom Subnet.
 		BtoD binToDec = new BtoD(getNG.getBB());
