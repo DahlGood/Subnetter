@@ -4,7 +4,7 @@ WIP
 
 Tool designed to calculate and build a better understanding of all information required in the CISCO Introduction to Networking course CIS170.
 
-GUI Preview @ subnetter.dahlgood.com
+GUI Preview @ http://subnetter.dahlgood.com
 
 # Features
 
