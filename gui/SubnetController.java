@@ -167,10 +167,10 @@ public class SubnetController {
 		int total[] = new int[3];
 		total = binToDec.getDecimal();
 		if(classIdentification.getClassId().equals("A")) {
-			customMask.setText(Integer.toString(getDefMask[0]) + "." + Integer.toString(total[2]) + "." + Integer.toString(total[1]) + "." + Integer.toString(total[0]));
+			customMask.setText(Integer.toString(getDefMask[0]) + "." + Integer.toString(total[0]) + "." + Integer.toString(total[1]) + "." + Integer.toString(total[2]));
 		}
 		else if(classIdentification.getClassId().equals("B")) {
-			customMask.setText(Integer.toString(getDefMask[0]) + "." + Integer.toString(getDefMask[1]) + "." + Integer.toString(total[1]) + "." + Integer.toString(total[0]));
+			customMask.setText(Integer.toString(getDefMask[0]) + "." + Integer.toString(getDefMask[1]) + "." + Integer.toString(total[0]) + "." + Integer.toString(total[1]));
 		}
 		else if(classIdentification.getClassId().equals("C")) {
 			customMask.setText(Integer.toString(getDefMask[0]) + "." + Integer.toString(getDefMask[1]) + "." + Integer.toString(getDefMask[2]) + "." + Integer.toString(total[0]));
