@@ -21,6 +21,6 @@ To-Do:
 
 * VLSM Calculations
 * Subnet & VLSM Export Tool
-* Smart Tutor (detailed explanation for specific problems)
+* Smart Tutor (detailed explanations for specific problems)
 
 
