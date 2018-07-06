@@ -10,12 +10,12 @@ GUI Preview @ http://subnetter.dahlgood.com
 
 Finished:
 
-* GUI (Subnet Only)
+* GUI (Subnet, VLSM)
 * Subnet Calculations
 
 In Progress:
 
-* GUI (VLSM, Home, Reuslt)
+* GUI (Home, Result)
 
 To-Do:
 

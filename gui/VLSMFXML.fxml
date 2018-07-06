@@ -2,8 +2,13 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="rootPane" maxHeight="600.0" maxWidth="800.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.VLSMController">
@@ -17,7 +22,7 @@
                         <Font name="TYPOGRAPH PRO SemiBold" size="18.0" />
                      </font>
                   </Label>
-                  <Button layoutX="-2.0" layoutY="-2.0" mnemonicParsing="false" onAction="#homeButtonClicked" opacity="0.0" prefHeight="85.0" prefWidth="148.0" />
+                  <Button layoutX="2.0" layoutY="2.0" mnemonicParsing="false" onAction="#homeButtonClicked" opacity="0.0" prefHeight="78.0" prefWidth="141.0" />
                </children>
             </Pane>
             <Pane layoutY="78.0" prefHeight="78.0" prefWidth="141.0" style="-fx-background-color: #2d3540;" styleClass="button" stylesheets="@css/subnetterStyle.css">
@@ -27,7 +32,7 @@
                         <Font name="TYPOGRAPH PRO SemiBold" size="18.0" />
                      </font>
                   </Label>
-                  <Button layoutX="-3.0" layoutY="-4.0" mnemonicParsing="false" onAction="#vlsmButtonClicked" opacity="0.0" prefHeight="85.0" prefWidth="148.0" />
+                  <Button layoutX="-4.0" layoutY="-5.0" mnemonicParsing="false" onAction="#vlsmButtonClicked" opacity="0.0" prefHeight="88.0" prefWidth="149.0" style="-fx-background-color: #2d3540;" />
                </children>
             </Pane>
             <Pane layoutY="156.0" prefHeight="78.0" prefWidth="141.0" styleClass="button" stylesheets="@css/subnetterStyle.css">
@@ -37,7 +42,7 @@
                         <Font name="TYPOGRAPH PRO SemiBold" size="18.0" />
                      </font>
                   </Label>
-                  <Button layoutX="-1.0" layoutY="-4.0" mnemonicParsing="false" onAction="#subnetButtonClicked" opacity="0.0" prefHeight="85.0" prefWidth="148.0" />
+                  <Button layoutX="-2.0" layoutY="-5.0" mnemonicParsing="false" onAction="#subnetButtonClicked" opacity="0.0" prefHeight="88.0" prefWidth="149.0" />
                </children>
             </Pane>
             <Pane layoutY="372.0" prefHeight="77.0" prefWidth="141.0" styleClass="button" stylesheets="@css/subnetterStyle.css">
@@ -47,11 +52,71 @@
                         <Font name="TYPOGRAPH PRO SemiBold" size="18.0" />
                      </font>
                   </Label>
-                  <Button layoutX="-1.0" layoutY="-6.0" mnemonicParsing="false" onAction="#resultButtonClicked" opacity="0.0" prefHeight="83.0" prefWidth="144.0" />
+                  <Button layoutX="-1.0" layoutY="-3.0" mnemonicParsing="false" onAction="#resultButtonClicked" opacity="0.0" prefHeight="80.0" prefWidth="143.0" />
                </children>
             </Pane>
          </children>
       </Pane>
-      <Pane layoutX="184.0" layoutY="89.0" maxHeight="400.0" maxWidth="460.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="416.0" style="-fx-background-color: #303841;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Pane layoutX="184.0" layoutY="89.0" maxHeight="400.0" maxWidth="460.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="416.0" style="-fx-background-color: #303841;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Separator layoutX="74.0" layoutY="88.0" opacity="0.25" prefHeight="27.0" prefWidth="524.0" />
+            <Label layoutX="114.0" layoutY="32.0" text="IP Address:" textFill="#e3e3e3">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="ipAddress" alignment="CENTER" layoutX="114.0" layoutY="61.0" prefHeight="25.0" prefWidth="87.0" promptText="127.0.0.1" style="-fx-background-color: #282e36; -fx-text-fill: #e3e3e3;" />
+            <Label layoutX="218.0" layoutY="60.0" text="/" textFill="#e3e3e3">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="241.0" layoutY="32.0" text="Cidr:" textFill="#e3e3e3">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="cidr" alignment="CENTER" layoutX="238.0" layoutY="61.0" prefHeight="25.0" prefWidth="43.0" promptText="32" style="-fx-background-color: #282e36; -fx-text-fill: #e3e3e3;" />
+            <Label layoutX="414.0" layoutY="32.0" text="Subnets:" textFill="#e3e3e3">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="subnets" alignment="CENTER" layoutX="404.0" layoutY="61.0" prefHeight="25.0" prefWidth="87.0" promptText="4" style="-fx-background-color: #282e36; -fx-text-fill: #e3e3e3;" />
+            <GridPane fx:id="grid" hgap="34.0" layoutX="51.0" layoutY="193.0" prefHeight="214.0" prefWidth="560.0" vgap="12.0">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="295.0" minWidth="10.0" prefWidth="238.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="258.0" minWidth="10.0" prefWidth="244.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="258.0" minWidth="10.0" prefWidth="244.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="258.0" minWidth="10.0" prefWidth="244.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="81.0" minHeight="0.0" prefHeight="29.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="81.0" minHeight="0.0" prefHeight="26.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="172.0" minHeight="0.0" prefHeight="26.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="191.0" minHeight="0.0" prefHeight="26.0" valignment="CENTER" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="191.0" minHeight="10.0" prefHeight="26.0" valignment="CENTER" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="191.0" minHeight="10.0" prefHeight="24.0" valignment="CENTER" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+            <Button layoutX="282.0" layoutY="115.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="109.0" style="-fx-text-fill: #e3e3e3;" stylesheets="@css/subnetterStyle.css" text="Calculate">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="452.0" layoutY="122.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="78.0" style="-fx-text-fill: #e3e3e3;" stylesheets="@css/subnetterStyle.css" text="Export">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="140.0" layoutY="122.0" mnemonicParsing="false" onAction="#addSubnetFields" prefHeight="37.0" prefWidth="78.0" style="-fx-text-fill: #e3e3e3;" stylesheets="@css/subnetterStyle.css" text="Start">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Label fx:id="status" layoutX="9.0" layoutY="428.0" text="Status :" textFill="#8d8d8d" />
+            <Label fx:id="currentStatus" layoutX="53.0" layoutY="428.0" text="waiting..." textFill="#5e5e5e" />
+         </children>
+      </Pane>
    </children>
 </AnchorPane>

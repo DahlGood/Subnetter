@@ -1,6 +1,8 @@
 package gui;
 
+import java.awt.Desktop;
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -46,6 +48,16 @@ public class HomeController implements Initializable {
 		System.out.println("Loading Results...");
 		AnchorPane pane = FXMLLoader.load(getClass().getResource("ResultFXML.fxml"));
 		rootPane.getChildren().setAll(pane);
+	}
+	
+	public void toSite(ActionEvent event) {
+		System.out.println("Going to the Subnetter website.");
+		try {
+			Desktop.getDesktop().browse(new URL("http://subnetter.dahlgood.com/").toURI());
+		} catch (IOException | URISyntaxException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 }

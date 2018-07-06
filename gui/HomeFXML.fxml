@@ -2,6 +2,9 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
@@ -17,7 +20,7 @@
                         <Font name="TYPOGRAPH PRO SemiBold" size="18.0" />
                      </font>
                   </Label>
-                  <Button layoutX="-3.0" layoutY="-2.0" mnemonicParsing="false" onAction="#homeButtonClicked" opacity="0.0" prefHeight="85.0" prefWidth="148.0" />
+                  <Button layoutX="2.0" layoutY="2.0" mnemonicParsing="false" onAction="#homeButtonClicked" opacity="0.0" prefHeight="78.0" prefWidth="141.0" />
                </children>
             </Pane>
             <Pane layoutY="78.0" prefHeight="78.0" prefWidth="141.0" styleClass="button" stylesheets="@css/subnetterStyle.css">
@@ -27,7 +30,7 @@
                         <Font name="TYPOGRAPH PRO SemiBold" size="18.0" />
                      </font>
                   </Label>
-                  <Button layoutX="-1.0" layoutY="-4.0" mnemonicParsing="false" onAction="#vlsmButtonClicked" opacity="0.0" prefHeight="85.0" prefWidth="141.0" />
+                  <Button layoutX="-4.0" layoutY="-5.0" mnemonicParsing="false" onAction="#vlsmButtonClicked" opacity="0.0" prefHeight="88.0" prefWidth="149.0" />
                </children>
             </Pane>
             <Pane layoutY="156.0" prefHeight="78.0" prefWidth="141.0" styleClass="button" stylesheets="@css/subnetterStyle.css">
@@ -37,20 +40,45 @@
                         <Font name="TYPOGRAPH PRO SemiBold" size="18.0" />
                      </font>
                   </Label>
-                  <Button layoutX="-3.0" layoutY="-2.0" mnemonicParsing="false" onAction="#subnetButtonClicked" opacity="0.0" prefHeight="85.0" prefWidth="148.0" />
+                  <Button layoutX="-2.0" layoutY="-5.0" mnemonicParsing="false" onAction="#subnetButtonClicked" opacity="0.0" prefHeight="88.0" prefWidth="149.0" />
                </children>
             </Pane>
-            <Pane layoutY="371.0" prefHeight="78.0" prefWidth="141.0" styleClass="button" stylesheets="@css/subnetterStyle.css">
+            <Pane layoutY="372.0" prefHeight="77.0" prefWidth="141.0" styleClass="button" stylesheets="@css/subnetterStyle.css">
                <children>
                   <Label layoutX="32.0" layoutY="27.0" text="RESULT" textFill="#e3e3e3">
                      <font>
                         <Font name="TYPOGRAPH PRO SemiBold" size="18.0" />
                      </font>
                   </Label>
-                  <Button layoutX="-3.0" layoutY="-5.0" mnemonicParsing="false" onAction="#resultButtonClicked" opacity="0.0" prefHeight="85.0" prefWidth="148.0" />
+                  <Button layoutX="-1.0" layoutY="-3.0" mnemonicParsing="false" onAction="#resultButtonClicked" opacity="0.0" prefHeight="80.0" prefWidth="143.0" />
                </children>
             </Pane>
-            <Pane layoutX="141.0" maxHeight="450.0" maxWidth="660.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="660.0" style="-fx-background-color: #303841;" />
+         </children>
+      </Pane>
+      <Pane layoutX="184.0" layoutY="89.0" maxHeight="400.0" maxWidth="460.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="416.0" style="-fx-background-color: #303841;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="251.0" layoutY="32.0" text="Subnetter" textFill="#e3e3e3">
+               <font>
+                  <Font name="TYPOGRAPH PRO SemiBold" size="32.0" />
+               </font>
+            </Label>
+            <Label layoutX="319.0" layoutY="80.0" text="WIP" textFill="#e3e3e3">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </Label>
+            <Separator layoutX="74.0" layoutY="88.0" opacity="0.25" prefHeight="27.0" prefWidth="524.0" />
+            <Label layoutX="74.0" layoutY="127.0" text="To get started click one of the buttons on the bar to the left." textFill="#e3e3e3">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="71.0" fitWidth="71.0" layoutX="583.0" layoutY="373.0">
+               <image>
+                  <Image url="@content/Subnetter-Logo-V2-SHADOW.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="website" layoutX="582.0" layoutY="373.0" mnemonicParsing="false" onAction="#toSite" opacity="0.0" prefHeight="71.0" prefWidth="71.0" />
          </children>
       </Pane>
    </children>

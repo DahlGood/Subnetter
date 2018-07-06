@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 //import javafx.scene.control.Button;
 //import javafx.scene.control.Label;
 //import javafx.scene.layout.AnchorPane;
@@ -26,6 +27,8 @@ public class Display extends Application{
 		Parent root = FXMLLoader.load(getClass().getResource("HomeFXML.fxml"));
 		Scene scene = new Scene(root);
 		stage.setTitle("Subnetter by Luke Dependahl");
+		//stage.getIcons().add(new Image("Subnetter-Logo.png"));
+		stage.getIcons().add(new Image(Display.class.getResourceAsStream("content/Subnetter-Logo.png"))); 
 		stage.setScene(scene);
 		stage.show();
 	}
